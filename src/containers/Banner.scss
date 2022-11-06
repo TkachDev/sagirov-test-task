@@ -19,7 +19,15 @@
   justify-content: center;
   position: relative;
 
-    &:before {
+  &--cool-button-container {
+    width: 100%;
+  }
+  &--cool-button {
+    font-size: 20px;
+    width: 100%;
+  }
+
+  &:before {
     content: "";
     position: absolute;
     height: 420px;
@@ -68,16 +76,17 @@
         margin: 0;
         font-family: Roboto, Arial, sans-serif;
         background-color: #ffffff;
-        background-image: linear-gradient(90deg, #ffffff 10%, #f53f02);
+        background-image: linear-gradient(to right, #ffffff 10%, #f53f02);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         font-size: 48px;
         @media (max-width: 1100px) {
-          font-size: 80px;
+          font-size: 40px;
+          background-image: linear-gradient(to bottom, #ffffff, #f53f02);
         }
 
         &--second-line {
-          font-size: .396em;
+          font-size: 0.396em;
         }
       }
     }
@@ -102,11 +111,6 @@
         position: relative;
         overflow: hidden;
         color: rgba(255, 255, 255, 0.5);
-        @media (max-width: 1110px) {
-          font-size: 20px;
-          height: 180px;
-          width: 180px;
-        }
 
         &--second-line {
           font-size: 4em;

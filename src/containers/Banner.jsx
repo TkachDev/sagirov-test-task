@@ -17,8 +17,9 @@ const Banner = () => {
             href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             target="_blank"
             rel="noreferrer"
+            className="banner--cool-button-container"
           >
-            <CoolButton>Начать путешествие</CoolButton>
+            <CoolButton className="banner--cool-button">Начать путешествие</CoolButton>
           </a>
         </div>
 
