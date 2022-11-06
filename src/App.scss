@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+
+.spacex-logo {
+  padding: 0 10px 10px 20px;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  & main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+  }
+}

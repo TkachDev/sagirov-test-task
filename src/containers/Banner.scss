@@ -1,0 +1,297 @@
+.banner {
+  background-image: linear-gradient(
+      90deg,
+      #0e151e,
+      rgba(0, 0, 0, 0) 10%,
+      rgba(0, 0, 0, 0) 90%,
+      #0e151e
+    ),
+    url("../../public/mars.jpg");
+  background-size: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #0e151e;
+  max-height: 725px;
+  min-height: 500px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+    &:before {
+    content: "";
+    position: absolute;
+    height: 420px;
+    width: 420px;
+    border-radius: 50%;
+    background-color: white;
+    background-size: 900px;
+    background-position: center;
+    background-image: url("../../public/mars.jpg");
+    @media (max-width: 1100px) {
+      content: none;
+    }
+  }
+
+  &--content-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1160px;
+    width: 100%;
+    padding: 0 30px;
+
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 100px;
+      gap: 30px;
+    }
+
+    &--left-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 90px;
+
+      @media (max-width: 1100px) {
+        align-items: center;
+        gap: 30px;
+      }
+
+      &--tittle {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
+        font-family: Roboto, Arial, sans-serif;
+        background-color: #ffffff;
+        background-image: linear-gradient(90deg, #ffffff 10%, #f53f02);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 48px;
+        @media (max-width: 1100px) {
+          font-size: 80px;
+        }
+
+        &--second-line {
+          font-size: .396em;
+        }
+      }
+    }
+
+    &--right-column {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      gap: 10px;
+
+      &--cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        height: 150px;
+        width: 150px;
+        transition: 500ms;
+        background-size: 500%;
+        background-position: center;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        color: rgba(255, 255, 255, 0.5);
+        @media (max-width: 1110px) {
+          font-size: 20px;
+          height: 180px;
+          width: 180px;
+        }
+
+        &--second-line {
+          font-size: 4em;
+          font-weight: 600;
+          & .little-thing {
+            font-size: 20px;
+          }
+        }
+
+        &:hover {
+          background-size: 100%;
+          color: white;
+        }
+
+        &:before,
+        &:after {
+          position: absolute;
+          content: "";
+          transition: 500ms;
+        }
+
+        &:nth-child(1) {
+          background-image: linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.15)
+          );
+
+          &:before {
+            bottom: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-image: linear-gradient(
+              to top,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:after {
+            bottom: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(
+              to left,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:hover {
+            &:before {
+              bottom: 0;
+            }
+            &:after {
+              right: 0;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          background-image: linear-gradient(
+            -135deg,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.15)
+          );
+
+          &:before {
+            bottom: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-image: linear-gradient(
+              to top,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:after {
+            bottom: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:hover {
+            &:before {
+              bottom: 0;
+            }
+            &:after {
+              left: 0;
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          background-image: linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.15)
+          );
+
+          &:before {
+            top: -100%;
+            right: 0;
+            width: 2px;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:after {
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(
+              to left,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:hover {
+            &:before {
+              top: 0;
+            }
+            &:after {
+              right: 0;
+            }
+          }
+        }
+
+        &:nth-child(4) {
+          background-image: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0) 50%,
+            rgba(255, 255, 255, 0.15)
+          );
+
+          &:before {
+            top: -100%;
+            left: 0;
+            width: 2px;
+            height: 100%;
+            background-image: linear-gradient(
+              to bottom,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:after {
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 2px;
+            background-image: linear-gradient(
+              to right,
+              rgba(255, 255, 255, 0.3),
+              rgba(255, 255, 255, 0)
+            );
+          }
+
+          &:hover {
+            &:before {
+              top: 0;
+            }
+            &:after {
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.cool-button {
+  background-color: #080c18;
+  color: rgba(255, 255, 255, 0.7);
+  transition: 500ms;
+  position: relative;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  overflow: hidden;
+
+  &:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+  }
+
+  &--content {
+    padding: 8px 21px;
+
+    @media (max-width: 1100px) {
+      font-size: 40px;
+    }
+  }
+
+  &--top-right-angle,
+  &--bottom-left-angle {
+    &:before,
+    &:after {
+      content: "";
+      box-shadow: 0 0 10px 1px white;
+      position: absolute;
+      transition: 500ms;
+      border-color: white;
+      border-style: solid;
+      z-index: 1;
+    }
+    &:hover {
+      &:before,
+      &:after {
+        box-shadow: 0 0 10px 2px white;
+      }
+    }
+  }
+
+  &--top-right-angle {
+    &:before {
+      width: 5px;
+      right: 0;
+      top: 0;
+      border-width: 1px 1px 0 0;
+    }
+
+    &:after {
+      height: 5px;
+      right: 0;
+      top: 0;
+      border-width: 0 0 1px 1px;
+    }
+  }
+
+  &--bottom-left-angle {
+    &:before {
+      width: 5px;
+      left: 0;
+      bottom: 0;
+      border-width: 1px 1px 0 0;
+    }
+    &:after {
+      height: 5px;
+      left: 0;
+      bottom: 0;
+      border-width: 0 0 1px 1px;
+    }
+  }
+
+  &--top-and-bottom-borders,
+  &--left-and-right-borders {
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      transition: 500ms;
+    }
+  }
+
+  &--top-and-bottom-borders {
+    &:before,
+    &:after {
+      width: 200%;
+      height: 1px;
+    }
+    &:before {
+      top: 0;
+      right: -100%;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgb(6, 96, 159),
+        white
+      );
+    }
+    &:after {
+      bottom: 0;
+      left: -100%;
+      background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0),
+        rgb(6, 96, 159),
+        white
+      );
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+        right: 0;
+      }
+      &:after {
+        width: 100%;
+        left: 0;
+      }
+    }
+  }
+
+  &--left-and-right-borders {
+    &:before,
+    &:after {
+      width: 1px;
+      height: 200%;
+    }
+    &:before {
+      left: 0;
+      bottom: -100%;
+      background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0),
+        rgb(6, 96, 159),
+        white
+      );
+    }
+    &:after {
+      top: -100%;
+      right: 0;
+      background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0),
+        rgb(6, 96, 159),
+        white
+      );
+    }
+
+    &:hover {
+      &:before {
+        height: 100%;
+        bottom: 0;
+      }
+      &:after {
+        height: 100%;
+        top: 0;
+      }
+    }
+  }
+}
